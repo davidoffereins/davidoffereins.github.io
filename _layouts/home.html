@@ -3,33 +3,14 @@ layout: default
 ---
 
 <div class="home">
- 
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
-  {{ content }}
-
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
-
+    <div class="site-title">
+        <h1>David Offereins Design</h1>
+    </div> 
+    <div class="site-intro">
+        <p>&#128075;, I'm David. Over the last 15 years I have designed brands, interfaces, websites and more. I am available to work on new projects. &#127881;</p>
+        <div class="contact-info">
+            <div><a href="tel:+31644710684">+31 6 44 710 684</a></div>
+            <div><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></div>
+        </div>
+    </div> 
 </div>
