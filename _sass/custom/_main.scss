@@ -67,3 +67,40 @@
     font-size: $base-font-size;
   }
 }
+
+/*-----------------------------------*\
+  $BASE
+\*-----------------------------------*/
+html {
+   height: 100%;
+  background:
+		linear-gradient(
+			limegreen,
+			transparent
+		),
+		linear-gradient(
+			90deg,
+			skyblue,
+			transparent
+		),
+		linear-gradient(
+			-90deg,
+			coral,
+			transparent
+		);
+	background-blend-mode: screen;
+	-webkit-animation: hue 30s infinite linear;
+}
+/*-----------------------------------*\
+  $ANIMATIONS
+\*-----------------------------------*/
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
