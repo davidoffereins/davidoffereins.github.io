@@ -2,17 +2,25 @@
 
 // Define defaults for each variable.
 
-$base-font-family: karmina, Times, "Times New Roman", serif !default;
-$heading-font-family: neue-haas-grotesk-text, Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$base-font-family: neue-haas-grotesk-text, Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
 $base-font-size:   1rem !default;
-$base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $large-font-size:  $base-font-size * 1.4 !default;
-$base-line-height: 1.5 !default;
 
-$spacing-unit:     2rem !default;
+$base-font-weight: 400 !default;
+$medium-font-weight: 500 !default;
+$bold-font-weight: 700 !default;
+
+
+$base-line-height: 1.5 !default;
+$tight-line-height: 1.2 !default;
+
+$spacing-unit:     .75rem !default;
+$large-spacing-unit: $spacing-unit * 4 !default;
 
 $text-color:       #1b1b1b !default;
+$border-color:     #4d4d4d !default;
 $background-color: #eaeaea !default;
 $brand-color:      #2a7ae2 !default;
 
@@ -49,7 +57,7 @@ $small-screen:     65vw !default;
 // Import partials.
 @import
   "minima/base",
-  "minima/layout",
+  // "minima/layout",
   "minima/syntax-highlighting",
   "custom/main"
 ;

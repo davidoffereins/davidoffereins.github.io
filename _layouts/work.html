@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="work">
+ 
+    {% assign image_files = site.static_files | where: "image", true %}
+
+    {% for myimage in image_files %}
+        <img loading="lazy" class="portfolio-img size-XL" src="{{ myimage.path | relative_url }}" alt="" width="2560" height="1440">
+    {% endfor %}
+    
+</div>
+
+
