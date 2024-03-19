@@ -1,37 +1,88 @@
+
+/*-----------------------------------*\
+  GENERAL
+\*-----------------------------------*/
+
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 
-  .page-content {
-    // align-self: start;
-    align-content: flex-start;
-
-    .wrapper {
-      // width: 100%;
-      // margin: 0 auto;
-      // padding: 1% 2% 1% 2%;
-      // -moz-box-sizing: border-box;
-      // -webkit-box-sizing: border-box;
-      // box-sizing: border-box;
-      padding-top: 8vw;
-    }
+  // Different background colors for pages
+  &.home {
+    background-color: rgb(234, 54, 54);
+  }
+  &.work {
+    background-color: black;
+  }
+  &.cv {
+    background-color: rgb(161, 244, 238);
   }
 }
 
 .wrapper {
   width: 100%;
   margin: 0 auto;
-  padding: 1% 2% 1% 2%;
+  padding: 2%;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
+.page-content {
+  flex: 1 0 auto;
+}
 
+.site-header,
+.site-footer {
+  flex: 0 0 auto;
 
-.home {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    border: 0;
+    vertical-align: baseline;
+    z-index: 1000;
+  }
+}
+
+.site-header {
+  .wrapper {
+    border-bottom: 1px solid $grey-color-light;
+    font-size: 4vw;
+    font-weight: $bold-font-weight;
+    padding: 0 2%;
+    font-size: $base-font-size;
+  }
+}
+
+.site-footer {
+
+  .wrapper {
+    border-top: 1px solid $grey-color-light;
+    font-size: $small-font-size;
+    font-weight: $medium-font-weight;
+    padding: $spacing-unit 2%;
+
+    div.footer-links {
+      display: flex;
+      align-items: center;
+
+      a {
+        display: flex;
+        margin-left: $spacing-unit;
+      }
+    }
+  }
+}
+
+/*-----------------------------------*\
+  HOME
+\*-----------------------------------*/
+
+.fixlater {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,35 +119,37 @@ body {
 
 }
 
-@media screen and (max-width: 65rem) {
-  
-  .home .site-title {
-    padding-top: 15vh;
-  }
+body.home {
 
-  .home .site-title h1 {
-    font-size: 5rem;
-    letter-spacing: -.2rem;
-  }
-
-  .home .site-intro {
-    max-width: 30rem;
-  }
-  .home .site-intro .contact-info div {
-    padding: .5rem;
-  }
-
-  .home .site-intro .contact-info {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .home .site-intro p,
-  .home .site-intro .contact-info div a {
-    font-size: $base-font-size;
+  .page-content p,
+  .page-content .contact-info a {
+    font-size: $large-font-size;
+    font-weight: $bold-font-weight;
+    line-height: $tight-line-height;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75em;
+    color: $text-color;
   }
 }
 
+/*-----------------------------------*\
+  WORK
+\*-----------------------------------*/
+
+img.portfolio-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 2%;
+  aspect-ratio: auto 2560 / 1440;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 2%;
+  }
+}
 
 
 /*-----------------------------------*\
@@ -141,71 +194,35 @@ div.cv.wrapper {
   }
 }
 
-.site-footer {
+/*-----------------------------------*\
+  MEDIA QUERIES
+\*-----------------------------------*/
 
-  .wrapper {
-    display: flex;
-    justify-content: space-between;
+/* @media screen and (max-width: 65rem) {
+  
+  .home .site-title {
+    padding-top: 15vh;
+  }
+
+  .home .site-title h1 {
+    font-size: 5rem;
+    letter-spacing: -.2rem;
+  }
+
+  .home .site-intro {
+    max-width: 30rem;
+  }
+  .home .site-intro .contact-info div {
+    padding: .5rem;
+  }
+
+  .home .site-intro .contact-info {
+    flex-direction: column;
     align-items: center;
-    border-top: 1px solid $grey-color-light;
-    // padding: $spacing-unit;
-    
-    div.footer-links {
-      display: flex;
-      align-items: center;
-      a {
-        display: flex;
-        margin-left: $spacing-unit;
-      }
-    }
-  }
-}
-
-.site-header {
-
-  .wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid $grey-color-light;
-  // padding: $spacing-unit;
-  margin: 0;
-  border: 0;
-  font: inherit;
-  vertical-align: baseline;
-  position: absolute;
-  width: 100vw;
-  height: auto;
-  left: 0;
-  z-index: 1000;
-  padding: 0 2% 0 2%;
-  // font-family: 'Roobert-Bold', sans-serif;
-  font-size: 4vw;
-  font-weight: $bold-font-weight;
-  box-sizing: border-box;
-  // color: var(--light);
-  // border-bottom: 1px solid var(--light);
   }
 
-}
-
-div.work {
-
-  img.portfolio-img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    padding-bottom: 2%;
-    aspect-ratio: auto 2560 / 1440;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    &:not(:last-child) {
-      margin-bottom: 2%;
-    }
+  .home .site-intro p,
+  .home .site-intro .contact-info div a {
+    font-size: $base-font-size;
   }
-}
-
-.wrapper.work {
-  background: black;
-}
+} */

@@ -4,9 +4,9 @@
 
 $base-font-family: neue-haas-grotesk-text, Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 
-$base-font-size:   1rem !default;
-$small-font-size:  $base-font-size * 0.875 !default;
-$large-font-size:  $base-font-size * 1.4 !default;
+$base-font-size:   1.875rem !default;
+$small-font-size:  $base-font-size * 0.575 !default;
+$large-font-size:  6.5vw !default;
 
 $base-font-weight: 400 !default;
 $medium-font-weight: 500 !default;
@@ -14,7 +14,7 @@ $bold-font-weight: 700 !default;
 
 
 $base-line-height: 1.5 !default;
-$tight-line-height: 1.2 !default;
+$tight-line-height: 95% !default;
 
 $spacing-unit:     .75rem !default;
 $large-spacing-unit: $spacing-unit * 4 !default;
