@@ -7,10 +7,14 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-size: 400% 400%;
+  animation: gradient 1s ease infinite;
+  // height: 100vh;
 
   // Different colors for pages
   &.home {
     background-color: $background-color-A;
+    background: linear-gradient(-45deg, #e75b35, #d25735, #ff8d58);
     color: $text-color;
     .svg-icon {
       fill: $link-color-A;
@@ -39,6 +43,7 @@ body {
   }
   &.cv {
     background-color: $background-color-B;
+    background: linear-gradient(70deg, #008dbc, #5fb2ed, #7bd5f1);
     color: $text-color;
     .svg-icon {
       fill: $link-color-B;
@@ -348,4 +353,16 @@ $cv-border-color: fade-out($link-color-B, .6);
       }
     }
   }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
