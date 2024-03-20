@@ -4,27 +4,38 @@
 
 $base-font-family: neue-haas-grotesk-text, Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 
-$base-font-size:   1.875rem !default;
-$small-font-size:  $base-font-size * 0.575 !default;
-$large-font-size:  6.5vw !default;
+$base-font-size:   2rem !default;
+$small-font-size:  $base-font-size * 0.6 !default;
+$large-font-size:  3.4vw !default;
+$xlarge-font-size:  6.2vw !default;
 
-$base-font-weight: 400 !default;
+$base-font-weight:   400 !default;
 $medium-font-weight: 500 !default;
-$bold-font-weight: 700 !default;
+$bold-font-weight:   700 !default;
+
+$base-line-height:  1.5 !default;
+$tight-line-height: 96% !default;
+
+$spacing-unit:         .75rem !default;
+$large-spacing-unit:   $spacing-unit * 2 !default;
+$xlarge-spacing-unit:  $spacing-unit * 4 !default;
+
+$text-color:       hsl(0, 0%, 5%) !default;
+$text-color-inv:   hsl(0, 0%, 90%) !default;
+$border-color:     hsla(0, 0%, 100%, 0.4) !default;
+
+$background-color-A: hsl(18, 95%, 45%) !default;
+$background-color-B: hsl(188, 46%, 66%) !default;
+$background-color-C: hsl(0, 0%, 0%) !default;
+
+$link-color-A: darken($background-color-A, 40%) !default;
+$link-color-B: darken($background-color-B, 50%) !default;
+$link-color-C: lighten($background-color-C, 90%) !default;
 
 
-$base-line-height: 1.5 !default;
-$tight-line-height: 95% !default;
+$brand-color:      hsla(0, 95%, 14%, 0.721) !default;
 
-$spacing-unit:     .75rem !default;
-$large-spacing-unit: $spacing-unit * 4 !default;
-
-$text-color:       #1b1b1b !default;
-$border-color:     #4d4d4d !default;
-$background-color: #eaeaea !default;
-$brand-color:      #2a7ae2 !default;
-
-$grey-color:       #828282 !default;
+$grey-color:       hsl(120, 100%, 50%) !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 

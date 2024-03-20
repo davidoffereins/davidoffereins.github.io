@@ -4,18 +4,11 @@
 
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
-   
-
-    {% if page.url != "/" %}
-      <div><a class="back-to-home" href="{{ "/" | relative_url }}">&#8593;</a></div>
-    {% else %}
-      <div class="site-title">{{ site.title | escape }}</div>
-    {% endif %}
+ 
+    <div><a href="/"><svg class="svg-icon"><use xlink:href="{{ '/assets/img/home.svg#iconhome' | relative_url }}"></use></svg></a></div>
 
     {%- if page_paths -%}
       <nav class="site-nav">
-
-
         <div class="trigger">
           {%- for path in page_paths -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}
@@ -28,4 +21,4 @@
     {%- endif -%}
 
   </div>
-</header>
+</header> 
