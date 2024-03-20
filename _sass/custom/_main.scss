@@ -87,7 +87,7 @@ body {
     border-bottom: 1px solid $border-color;
     font-size: 4vw;
     font-weight: $bold-font-weight;
-    font-size: $base-font-size;
+    font-size: 1.6vw;
 
     //vertical align home icon
     > div > a {
@@ -95,8 +95,8 @@ body {
     }
 
     .svg-icon {
-      width: 26px;
-      height: 26px;
+      width: 2.2vw;
+      height: 2.2vw;
       padding: 4px;
     }
 
@@ -110,7 +110,7 @@ body {
 
   .wrapper {
     border-top: 1px solid $border-color;
-    font-size: $small-font-size;
+    font-size: 1rem;
     font-weight: $medium-font-weight;
 
     div.footer-links {
@@ -133,7 +133,7 @@ body.home {
 
   .page-content p,
   .page-content .contact-info a {
-    font-size: $xlarge-font-size;
+    font-size: 6.2vw;
     font-weight: $bold-font-weight;
     line-height: $tight-line-height;
     letter-spacing: -0.02em;
@@ -150,6 +150,8 @@ body.home {
   border: 0;
   vertical-align: baseline;
   border-radius: 2.5vw;
+  position: relative;
+  top: 0.25vw;
 }
 
 /*-----------------------------------*\
@@ -176,11 +178,13 @@ img.portfolio-img {
   CV
 \*-----------------------------------*/
 
-div.cv.wrapper {
+$cv-border-color: fade-out($link-color-B, .6);
+
+.cv.wrapper {
   display: flex;
   flex-direction: column;
   align-self: center;
-  max-width: 55rem;
+  max-width: 70vw;
   padding: $xlarge-spacing-unit 2%;
 
   div.section:not(:first-child) {
@@ -189,7 +193,9 @@ div.cv.wrapper {
 
   div {
     h2 {
-      font-size: $base-font-size;
+      font-size: 1.6vw;
+      font-weight: $medium-font-weight;
+      color: $link-color-B;
     }
 
     .item {
@@ -197,19 +203,22 @@ div.cv.wrapper {
       flex-direction: column;
       margin-top: $spacing-unit;
       padding-top: $spacing-unit;
-      border-top: 1px solid $border-color;
+      border-top: 1px solid $cv-border-color;
 
       .time {
-        font-size: $small-font-size;
+        font-size: 1.2vw;
         text-transform: uppercase;
+        font-weight: $medium-font-weight;
+        color: $link-color-B;
+        padding-bottom: 0.4vw;
       }
       .company {
         font-weight: $bold-font-weight;
-        font-size: $large-font-size;
+        font-size:3.4vw;
         line-height: $tight-line-height;
       }
       .job-title {
-        font-size: $base-font-size;
+        font-size: 1.6vw;
       }
     }
   }
@@ -247,3 +256,38 @@ div.cv.wrapper {
     font-size: $base-font-size;
   }
 } */
+
+.site-header {
+  .wrapper {
+    // font-size: 2.4vw;
+  }
+}
+
+.cv.wrapper {
+/*   div {
+    h2 {
+      font-size: 2vw;
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      margin-top: $spacing-unit;
+      padding-top: $spacing-unit;
+      border-top: 1px solid $border-color;
+
+      .time {
+        font-size: $small-font-size;
+        text-transform: uppercase;
+      }
+      .company {
+        font-weight: $bold-font-weight;
+        font-size: $large-font-size;
+        line-height: $tight-line-height;
+      }
+      .job-title {
+        font-size: $base-font-size;
+      }
+    }
+  } */
+}

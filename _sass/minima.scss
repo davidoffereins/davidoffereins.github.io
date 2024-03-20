@@ -18,7 +18,7 @@ $tight-line-height: 96% !default;
 
 $spacing-unit:         .75rem !default;
 $large-spacing-unit:   $spacing-unit * 2 !default;
-$xlarge-spacing-unit:  $spacing-unit * 4 !default;
+$xlarge-spacing-unit:  $spacing-unit * 6 !default;
 
 $text-color:       hsl(0, 0%, 5%) !default;
 $text-color-inv:   hsl(0, 0%, 90%) !default;
@@ -33,9 +33,9 @@ $link-color-B: darken($background-color-B, 50%) !default;
 $link-color-C: lighten($background-color-C, 90%) !default;
 
 
-$brand-color:      hsla(0, 95%, 14%, 0.721) !default;
+$brand-color:      $text-color !default;
 
-$grey-color:       hsl(120, 100%, 50%) !default;
+$grey-color:       hsl(0, 0%, 41%) !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
