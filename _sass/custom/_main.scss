@@ -117,6 +117,11 @@ body {
       display: flex;
       align-items: center;
 
+      .svg-icon {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+
       a {
         display: flex;
         margin-left: $large-spacing-unit;
@@ -224,70 +229,123 @@ $cv-border-color: fade-out($link-color-B, .6);
   }
 }
 
-/*-----------------------------------*\
-  MEDIA QUERIES
-\*-----------------------------------*/
+@media screen and (max-width: 70rem) {
 
-/* @media screen and (max-width: 65rem) {
+  .site-header {
+    .wrapper {
+      font-size: 1.2rem;
+      
+      .svg-icon {
+        width: 1.6rem;
+        height: 1.6rem;
+        padding: 4px;
+      }
   
-  .home .site-title {
-    padding-top: 15vh;
+      a.page-link {
+        margin-left: $spacing-unit;
+      }
+    }
   }
 
-  .home .site-title h1 {
-    font-size: 5rem;
-    letter-spacing: -.2rem;
+  .site-footer {
+    .wrapper {
+      font-size: .8rem;
+  
+      div.footer-links a {
+        margin-left: $spacing-unit;
+      }
+    }
   }
 
-  .home .site-intro {
-    max-width: 30rem;
-  }
-  .home .site-intro .contact-info div {
-    padding: .5rem;
-  }
-
-  .home .site-intro .contact-info {
-    flex-direction: column;
-    align-items: center;
+  .home-portrait {
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 1.8rem;
+    position: relative;
+    top: 0.4rem;
   }
 
-  .home .site-intro p,
-  .home .site-intro .contact-info div a {
-    font-size: $base-font-size;
-  }
-} */
-
-.site-header {
-  .wrapper {
-    // font-size: 2.4vw;
+  .cv.wrapper {
+    max-width: 90%;
+    padding: 8vh 2%;
+  
+    div.section:not(:first-child) {
+      margin-top: $xlarge-spacing-unit;
+    }
+  
+    div {
+      h2 {
+        font-size: 0.8rem;
+      }
+  
+      .item {
+  
+        .time {
+          font-size: 0.8rem;
+          padding-bottom: 0.1rem;
+        }
+        .company {
+          font-size:2rem;
+        }
+        .job-title {
+          font-size: 1.2rem;
+        }
+      }
+    }
   }
 }
 
-.cv.wrapper {
-/*   div {
-    h2 {
-      font-size: 2vw;
-    }
+@media screen and (max-width: 48rem) {
 
-    .item {
-      display: flex;
-      flex-direction: column;
-      margin-top: $spacing-unit;
-      padding-top: $spacing-unit;
-      border-top: 1px solid $border-color;
+  body.home {
+    .page-content p,
+    .page-content .contact-info a {
+      font-size: 6.8vw;
+    }
+  }
 
-      .time {
-        font-size: $small-font-size;
-        text-transform: uppercase;
+  .cv.wrapper {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 30rem) {
+
+  body.home {
+    .page-content p,
+    .page-content .contact-info a {
+      font-size: 7.8vw;
+      line-height: 100%;
+    }
+  }
+
+  .home-portrait {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 1.25rem;
+    top: 0.25rem;
+  }
+
+  .cv.wrapper {
+
+    div {
+      h2 {
+        font-size: 0.8rem;
       }
-      .company {
-        font-weight: $bold-font-weight;
-        font-size: $large-font-size;
-        line-height: $tight-line-height;
-      }
-      .job-title {
-        font-size: $base-font-size;
+  
+      .item {
+  
+        .time {
+          font-size: 0.8rem;
+          padding-bottom: 0.1rem;
+        }
+        .company {
+          font-size:1.6rem;
+        }
+        .job-title {
+          font-size: 1rem;
+        }
       }
     }
-  } */
+  }
 }
