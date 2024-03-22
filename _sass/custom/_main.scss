@@ -142,7 +142,7 @@ body {
 body.home {
 
   .page-content p,
-  .page-content .contact-info a {
+  .page-content #contact-info a {
     font-size: 6.2vw;
     font-weight: $bold-font-weight;
     line-height: $tight-line-height;
@@ -304,7 +304,7 @@ $cv-border-color: fade-out($link-color-B, .6);
 
   body.home {
     .page-content p,
-    .page-content .contact-info a {
+    .page-content #contact-info a {
       font-size: 6.8vw;
     }
   }
@@ -318,7 +318,7 @@ $cv-border-color: fade-out($link-color-B, .6);
 
   body.home {
     .page-content p,
-    .page-content .contact-info a {
+    .page-content #contact-info a {
       font-size: 7.8vw;
       line-height: 100%;
     }
