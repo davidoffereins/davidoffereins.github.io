@@ -4,8 +4,22 @@
       <span>© 2024 David Offereins</span>
     </div>
     <div class="footer-links">
-      <div><a href="{{ '/#contact-info' | relative_url }}">Contact</a></div>
-      <div><a href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg></a></div>
+      {% if page.url == "/" %}
+        <div><a href="{{ '/cv' | relative_url }}">Curriculum Vitae</a></div>
+        <div><a href="{{ '/work' | relative_url }}">Work</a></div>
+      {% elsif page.url == "/work/" %}
+        <div><a href="{{ '/' | relative_url }}">Home</a></div>
+        <div><a href="{{ '/cv' | relative_url }}">Curriculum Vitae</a></div>
+        <div><a href="{{ '/#contact-info' | relative_url }}">Contact</a></div>
+      {% elsif page.url == "/cv/" %}
+        <div><a href="{{ '/' | relative_url }}">Home</a></div>
+        <div><a href="{{ '/work' | relative_url }}">Work</a></div>
+        <div><a href="{{ '/#contact-info' | relative_url }}">Contact</a></div>
+      {% else %}
+        <div><a href="{{ '/#contact-info' | relative_url }}">Contact</a></div>
+      {% endif %} 
+
+      
     </div>
   </div>
 </footer>
