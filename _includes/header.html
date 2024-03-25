@@ -5,20 +5,29 @@
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
  
-    <div><a href="/"><svg class="svg-icon"><use xlink:href="{{ '/assets/img/home.svg#iconhome' | relative_url }}"></use></svg></a></div>
-
+    <div>
+      <a href="/"><svg class="svg-icon"><use xlink:href="{{ '/assets/img/home.svg#iconhome' | relative_url }}"></use></svg></a>
+    </div>
+  
     {%- if page_paths -%}
-      <nav class="site-nav">
-        <div class="trigger">
-          {%- for path in page_paths -%}
-            {%- assign my_page = site.pages | where: "path", path | first -%}
-            {%- if my_page.title -%}
-            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-            {%- endif -%}
-          {%- endfor -%}
-        </div>
-      </nav>
+  
+      <input id="menu-toggle" type="checkbox" />
+      <label class='menu-button-container' for="menu-toggle">
+        <div class='menu-button'></div>
+      </label>
+      <ul class="menu">
+        <li class="home"><a class="page-link" href="{{ '/' | relative_url }}">Home</a></li>
+        {%- for path in page_paths -%}
+          {%- assign my_page = site.pages | where: "path", path | first -%}
+          {%- if my_page.title -%}
+        <li><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
+          {%- endif -%}
+        {%- endfor -%}
+        <li class="contact"><a class="page-link" href="{{ '/#contact-info' | relative_url }}">Contact</a></li>
+      </ul>
+  
     {%- endif -%}
 
   </div>
 </header>
+

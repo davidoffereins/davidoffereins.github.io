@@ -24,11 +24,11 @@ $text-color:       hsl(0, 0%, 5%) !default;
 $text-color-inv:   hsl(0, 0%, 85%) !default;
 $border-color:     hsla(0, 0%, 100%, 0.4) !default;
 
-$background-color-A: hsl(18, 95%, 45%) !default;
-$background-color-B: hsl(188, 46%, 66%) !default;
+$background-color-A: #ea603a !default;
+$background-color-B: #5fb2ed !default;
 $background-color-C: hsl(0, 0%, 2%) !default;
 
-$link-color-A: darken($background-color-A, 40%) !default;
+$link-color-A: darken($background-color-A, 80%) !default;
 $link-color-B: darken($background-color-B, 50%) !default;
 $link-color-C: lighten($background-color-C, 85%) !default;
 
@@ -70,5 +70,6 @@ $small-screen:     65vw !default;
   "minima/base",
   // "minima/layout",
   // "minima/syntax-highlighting",
-  "custom/main"
+  "custom/main",
+  "custom/menu"
 ;

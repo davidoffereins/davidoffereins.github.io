@@ -23,6 +23,14 @@ body {
     .site-footer a {
       color: $link-color-A;
     }
+    #menu-toggle:checked ~ .menu {
+      background: $background-color-A;
+    }
+    .menu-button,
+    .menu-button::before,
+    .menu-button::after {
+      background-color: $link-color-A;
+    }
   }
   &.work {
     background-color: $background-color-C;
@@ -36,6 +44,14 @@ body {
     .site-footer,
     .site-footer a {
       color: $link-color-C;
+    }
+    #menu-toggle:checked ~ .menu {
+      background: $background-color-C;
+    }
+    .menu-button,
+    .menu-button::before,
+    .menu-button::after {
+      background-color: $link-color-C;
     }
   }
   &.cv {
@@ -51,6 +67,14 @@ body {
     .site-footer,
     .site-footer a {
       color: $link-color-B;
+    }
+    #menu-toggle:checked ~ .menu {
+      background: $background-color-B;
+    }
+    .menu-button,
+    .menu-button::before,
+    .menu-button::after {
+      background-color: $link-color-B;
     }
   }
 }
@@ -236,7 +260,7 @@ $cv-border-color: fade-out($link-color-B, .6);
   .site-header {
     .wrapper {
       font-size: 1.2rem;
-      
+
       .svg-icon {
         width: 1.6rem;
         height: 1.6rem;
@@ -264,7 +288,8 @@ $cv-border-color: fade-out($link-color-B, .6);
     height: 3.6rem;
     border-radius: 1.8rem;
     position: relative;
-    top: 0.4rem;
+    top: 0.25rem;
+    z-index: 1;
   }
 
   .cv.wrapper {
