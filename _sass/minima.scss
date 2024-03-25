@@ -66,6 +66,7 @@ $small-screen:     65vw !default;
 
 // Import partials.
 @import
+  "custom/normalize",
   "minima/base",
   // "minima/layout",
   // "minima/syntax-highlighting",
